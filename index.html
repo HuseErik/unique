@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>4</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Agu+Display:MORF@25&family=Sacramento&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+  <!-- Header Section -->
+  <header class="pb-5">
+    <div id="home" class="header-container ">
+      <h1>Welcome to Our Special Place</h1>
+      <p>Where every visit lets you relive cherished moments.</p>
+      <!-- Proceed Button -->
+      <a href="#about" class="proceed-btn" onclick="enableScroll()">Proceed</a>
+    </div>
+  </header>
+
+  <!-- PIN Modal -->
+  <div class="modal fade" id="pinModal" tabindex="-1" aria-labelledby="pinModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="pinModalLabel">Enter PIN</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <input type="password" id="pinInput" class="form-control" placeholder="Enter PIN" />
+          <p class="text-danger" id="pinError" style="display: none;">Incorrect PIN, please try again.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+          <button type="button" class="btn btn-primary" id="submitPinBtn">Submit</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <nav class="navbar navbar-expand-lg sticky-top" id="mainNav">
+      <div class="container">
+          <a class="navbar-brand text-light fs-5" href="#home" onclick="scrollToHomeAndReload(event)">
+            Home
+          </a>
+          <button class="navbar-toggler text-uppercase font-weight-bold fs-6 text-white rounded" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+              Menu
+          </button>
+          <div class="collapse navbar-collapse" id="navbarResponsive">
+              <ul class="navbar-nav ms-auto text-uppercase fs-6">
+                  <li class="nav-item mx-0 mx-lg-1"><a class="nav-link rounded text-light" href="#about">About Us</a></li>
+                  <li class="nav-item mx-0 mx-lg-1"><a class="nav-link rounded text-light" href="#gallery">Gallery</a></li>
+                  <li class="nav-item mx-0 mx-lg-1"><a class="nav-link rounded text-light" href="#memories">Memories</a></li>
+                  <li class="nav-item mx-0 mx-lg-1"><a class="nav-link rounded text-light" href="#video-carousel">Videos</a></li>
+              </ul>
+          </div>
+      </div>
+  </nav>
+
+  <!-- About Section -->
+  <section id="about" class="about-section">
+    <div class="about-left">
+      <h2>About Us</h2>
+      <p class="section-text">This is our journey of love, laughter, and adventure. Every photo and video captures a memory we've made together—from our first date to our favorite moments. This website is a tribute to the beautiful experiences we share, and a reminder that the best moments in life are the ones spent with you.</p>
+    </div>
+    <div class="about-right">
+      <img src="Images/AboutUs.JPG" alt="photo" class="about-image">
+    </div>
+  </section>
+
+  <!-- Gallery Section -->
+  <section id="gallery">
+    <br>
+    <br>
+    <h2 class="mt-5">Our Moments Together</h2>
+    <div class="gallery-wrapper">
+      <!-- Left Arrow Button -->
+      <button class="gallery-btn left-btn">&#8592;</button>
+
+      <div class="gallery-container">
+        <div class="gallery-item" data-bs-toggle="modal" data-bs-target="#imageModal" data-bs-src="Images/1stPhoto.JPG">
+          <img src="Images/1stPhoto.JPG" alt="Our First Photo Together">
+        </div>
+        <div class="gallery-item" data-bs-toggle="modal" data-bs-target="#imageModal" data-bs-src="Images/1stMonth.JPG">
+          <img src="Images/1stMonth.JPG" alt="Our First Monthsary">
+        </div>
+        <div class="gallery-item" data-bs-toggle="modal" data-bs-target="#imageModal" data-bs-src="Images/1stVal.JPG">
+          <img src="Images/1stVal.JPG" alt="Our First Valentine">
+        </div>
+        <div class="gallery-item" data-bs-toggle="modal" data-bs-target="#imageModal" data-bs-src="Images/MyFavDate.JPG">
+          <img src="Images/MyFavDate.JPG" alt="My Favorite Date">
+        </div>
+        <div class="gallery-item" data-bs-toggle="modal" data-bs-target="#imageModal" data-bs-src="Images/FirstMeal.JPG">
+          <img src="Images/FirstMeal.JPG" alt="The first meal you ever made for me.">
+        </div>
+        <div class="gallery-item" data-bs-toggle="modal" data-bs-target="#imageModal" data-bs-src="Images/FavPhoto.JPG">
+          <img src="Images/FavPhoto.JPG" alt="My Favorite Photo of You">
+        </div>
+      </div>
+
+      <!-- Right Arrow Button -->
+      <button class="gallery-btn right-btn">&#8594;</button>
+    </div>
+
+    <!-- Modal for Image Preview -->
+    <div class="modal fade" id="imageModal" tabindex="-1" aria-labelledby="imageModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <p id="modalCaption" class="image-caption"></p> <!-- Moved above the image -->
+            <img id="modalImage" src="" alt="Zoomed Image" class="img-fluid">
+            <!-- <p></p> -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+   <!-- Letter -->
+  <div id="floating-love-letter" class="floating-love-letter hidden">
+    <div class="letter-content">
+      <p>My love,</p>
+      <p>I’ve realized that being with you is changing me, and at first, I wasn’t sure how to feel about it. But now, I see that through your love, patience, and warmth, I’m becoming someone I truly like. 💖</p>
+      <p>You show me kindness when I need it most, you challenge me in the best ways, and you remind me of the beauty in love and growth. And for that, I just want you to know—I love you, deeply and completely. 💖</p>
+      <p>Forever yours,<br>Jose</p>
+    </div>
+  </div>
+
+  <button id="openLetterBtn" class="open-letter-btn hidden" onclick="toggleLetter()">Open My Letter</button>
+
+
+  <!-- Memories Section -->
+  <section id="memories">
+    <br>
+    <br>
+    <h2>More Special Memories</h2>
+    <div class="memories-grid">
+      <div class="memory-item">
+        <img src="Images/Memories/BadMood.JPG" alt="BadMood">
+        <div class="caption">Bad Mood Moment</div>
+      </div>
+      <div class="memory-item">
+        <img src="Images/Memories/DinnerWithAte.JPG" alt="DinnerWithAte">
+        <div class="caption">Dinner with Ate</div>
+      </div>
+      <div class="memory-item">
+        <img src="Images/Memories/Ganda.JPG" alt="Ganda">
+        <div class="caption">Super Pretty 😍</div>
+      </div>
+      <div class="memory-item">
+        <img src="Images/Memories/HappyTubig.JPG" alt="HappyTubig">
+        <div class="caption">Water is life</div>
+      </div>
+      <div class="memory-item">
+        <img src="Images/Memories/LunchBreak.JPG" alt="LunchBreak">
+        <div class="caption">Lunch Break Fun</div>
+      </div>
+      <div class="memory-item">
+        <img src="Images/Memories/NoIdNoFaceMask.JPG" alt="NoIdNoFaceMask">
+        <div class="caption">No ID, No Face Mask</div>
+      </div>
+      <div class="memory-item">
+        <img src="Images/Memories/PaCuteAmp.JPG" alt="PaCuteAmp">
+        <div class="caption">Pa-cute Amp 🤭</div>
+      </div>
+      <div class="memory-item">
+        <img src="Images/Memories/SuperGanda.JPG" alt="SuperGanda">
+        <div class="caption">Super Ganda 🥰</div>
+      </div>
+      <div class="memory-item">
+        <img src="Images/Memories/Tayabas.JPG" alt="Tayabas">
+        <div class="caption">Trip to Tayabas 💞</div>
+      </div>
+      <div class="memory-item">
+        <img src="Images/Memories/ValSelfie.JPG" alt="ValSelfie">
+        <div class="caption">Valentine's Selfie 💖</div>
+      </div>
+      <div class="memory-item">
+        <img src="Images/Memories/FirstSelfie.JPG" alt="FirstSelfie">
+        <div class="caption">Your First Selfie</div>
+      </div>
+      <div class="memory-item">
+        <img src="Images/Memories/Proof.JPG" alt="Proof">
+        <div class="caption">Proof of Selfie</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Video Carousel Section -->
+  <section id="video-carousel">
+    <br>
+    <br>
+    <br>
+    <br>
+    <h2>Our Special Video Moments</h2>
+    
+    <div id="videoCarousel" class="carousel slide mb-5" data-bs-ride="carousel">
+      <div class="carousel-inner">
+
+        <!-- First Video Slide (Active) -->
+        <div class="carousel-item active">
+          <video class="d-block w-100" controls autoplay muted>
+            <source src="Videos/FirstTiktok.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+
+        <!-- Second Video Slide -->
+        <div class="carousel-item">
+          <video class="d-block w-100" controls autoplay muted>
+            <source src="Videos/TimeLapse.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+
+        <!-- Third Video Slide -->
+        <div class="carousel-item">
+          <video class="d-block w-100" controls autoplay muted>
+            <source src="Videos/FavTiktok.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+
+        <!-- Fourth Video Slide -->
+        <div class="carousel-item">
+          <video class="d-block w-100" controls autoplay muted>
+            <source src="Videos/Vlog.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+
+      </div>
+
+      <!-- Carousel Controls -->
+      <button class="carousel-control-prev" type="button" data-bs-target="#videoCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#videoCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+  </section>
+
+<!--   <section id="playlist">
+    <h2>Our Playlist</h2>
+    <div class="playlist-container">
+      <audio controls>
+        <source src="path/to/your/music1.mp3" type="audio/mp3">
+        Your browser does not support the audio element.
+      </audio>
+      <audio controls>
+        <source src="path/to/your/music2.mp3" type="audio/mp3">
+        Your browser does not support the audio element.
+      </audio>
+    </div>
+  </section>
+ -->
+
+  <!-- Footer Section -->
+  <footer id="footer" class="text-white py-1 text-center">
+      <div class="mx-2">Made with ❤️ by Jose</div>
+      <div class="mx-2">&copy;<span id="year"></span> Our Website</div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="index.js"></script>
+</body>
+</html>
