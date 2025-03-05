@@ -501,7 +501,8 @@ html {
 /* Responsive: 1 Column on Extra Small Screens */
 @media (max-width: 480px) {
   .memories-grid {
-    grid-template-columns: 1fr; /* Single column for very small screens */
+    grid-template-columns: repeat(2, 1fr); /* Two columns */
+/*    grid-template-columns: 1fr; /* Single column for very small screens */*/
   }
 }
 
