@@ -139,5 +139,10 @@ document.addEventListener('DOMContentLoaded', () => {
     setTimeout(() => location.reload(), 1000);
   }
 
+  window.onload = function () {
+    document.getElementById("loading-screen").style.display = "none";
+  };
+
+
   document.querySelector('.navbar-brand').addEventListener('click', scrollToHomeAndReload);
 });
