@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Agu+Display:MORF@25&family=Sacramento&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Agu+Display:MORF@25&family=Sacramento&family=Orbitron:wght@400..900&family=Sixtyfour+Convergence&family=Bubblegum+Sans&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
@@ -51,6 +51,9 @@
 
   <nav class="navbar navbar-expand-lg sticky-top" id="mainNav">
       <div class="container">
+          <!-- <a class="navbar-brand text-light fs-5" href="#home" onclick="scrollToHomeAndReload(event)">
+            Home
+          </a> -->
           <a class="navbar-brand text-light fs-5" href="#home" onclick="scrollToHomeAndReload(event)">
             Home
           </a>
@@ -71,7 +74,7 @@
   <!-- About Section -->
   <section id="about" class="about-section">
     <div class="about-left">
-      <h2>About Us</h2>
+      <h2>AboutUs</h2>
       <p class="section-text">This is our journey of love, laughter, and adventure. Every photo and video captures a memory we've made together—from our first date to our favorite moments. This website is a tribute to the beautiful experiences we share, and a reminder that the best moments in life are the ones spent with you.</p>
     </div>
     <div class="about-right">
@@ -84,29 +87,30 @@
     <br>
     <br>
     <h2 class="mt-5">Our Moments Together</h2>
+    <p>Click to preview</p>
     <div class="gallery-wrapper">
       <!-- Left Arrow Button -->
       <button class="gallery-btn left-btn">&#8592;</button>
 
       <div class="gallery-container">
         <div class="gallery-item" data-bs-toggle="modal" data-bs-target="#imageModal" data-bs-src="./Images/1stPhoto.jpg">
-          <img src="./Images/1stPhoto.jpg" alt="Our First Photo Together">
+          <img src="./Images/1stPhoto.jpg" alt="Our First Photo Together - Naiilang pa ako humawak sayo dito 📸">
         </div>
         <div class="gallery-item" data-bs-toggle="modal" data-bs-target="#imageModal" data-bs-src="./Images/1stMonth.jpg">
-          <img src="./Images/1stMonth.jpg" alt="Our First Monthsary">
+          <img src="./Images/1stMonth.jpg" alt="Our First Monthsary - Masaya now palo pag-uwi 😆💖">
         </div>
         <div class="gallery-item" data-bs-toggle="modal" data-bs-target="#imageModal" data-bs-src="./Images/1stVal.jpg">
-          <img src="./Images/1stVal.jpg" alt="Our First Valentine">
+          <img src="./Images/1stVal.jpg" alt="Our First Valentine - A surprise you didn’t expect, dito din ako nangitim hehe 🎁🌞">
         </div>
         <div class="gallery-item" data-bs-toggle="modal" data-bs-target="#imageModal" data-bs-src="./Images/MyFavDate.jpg">
-          <img src="./Images/MyFavDate.jpg" alt="My Favorite Date">
+          <img src="./Images/MyFavDate.jpg" alt="My Favorite Date – This was the most perfect date we've had so far. Our date didn’t go as planned, but it turned out even better! This was also the first time I introduced you to my family, and when it was time to go home, we took a short adventure and met Josh, hehe. 💑✨">
         </div>
         <div class="gallery-item" data-bs-toggle="modal" data-bs-target="#imageModal" data-bs-src="./Images/FirstMeal.jpg">
-          <img src="./Images/FirstMeal.jpg" alt="The first meal you ever made for me.">
+          <img src="./Images/FirstMeal.jpg" alt="The first meal you ever made for me. - This is a very memorable moment and you know why hehe🤭🍽️">
         </div>
-        <div class="gallery-item" data-bs-toggle="modal" data-bs-target="#imageModal" data-bs-src="./Images/FavPhoto.jpg">
-          <img src="./Images/FavPhoto.jpg" alt="My Favorite Photo of You">
-        </div>
+<!--         <div class="gallery-item" data-bs-toggle="modal" data-bs-target="#imageModal" data-bs-src="./Images/FavPhoto.jpg">
+          <img src="./Images/FavPhoto.jpg" alt="My Favorite Photo of You - ">
+        </div> -->
       </div>
 
       <!-- Right Arrow Button -->
@@ -123,7 +127,7 @@
           <div class="modal-body">
             <p id="modalCaption" class="image-caption"></p> <!-- Moved above the image -->
             <img id="modalImage" src="" alt="Zoomed Image" class="img-fluid">
-            <!-- <p></p> -->
+            <!-- <p>I want to add a unique Story here based on the pictures</p> -->
           </div>
         </div>
       </div>
@@ -133,11 +137,12 @@
    <!-- Letter -->
   <div id="floating-love-letter" class="floating-love-letter hidden">
     <div class="letter-content">
-      <p>My love,</p>
-      <p>I’ve realized that being with you is changing me, and at first, I wasn’t sure how to feel about it. But now, I see that through your love, patience, and warmth, I’m becoming someone I truly like. 💖</p>
-      <p>You show me kindness when I need it most, you challenge me in the best ways, and you remind me of the beauty in love and growth. And for that, I just want you to know—I love you, deeply and completely. 💖</p>
-      <p>Forever yours,<br>Jose</p>
+        <p>My love,</p>
+        <p>I’ve realized that being with you is changing me, and at first, I wasn’t sure how to feel about it. But now, I see that through your love, patience, and warmth, I’m becoming someone I truly like. 🥰</p>
+        <p>You show me kindness when I need it most 🤗, you challenge me in the best ways 💪, and you remind me of the beauty in love and growth. 🌱💞 And for that, I just want you to know—I love you, deeply and completely. ❤️✨</p>
+        <p>Forever yours,<br>Jose</p>
     </div>
+
   </div>
 
   <button id="openLetterBtn" class="open-letter-btn hidden" onclick="toggleLetter()">Open My Letter</button>
@@ -201,61 +206,63 @@
   </section>
 
   <!-- Video Carousel Section -->
-  <section id="video-carousel">
-    <br>
-    <br>
-    <br>
-    <br>
-    <h2>Our Special Video Moments</h2>
-    
-    <div id="videoCarousel" class="carousel slide mb-5" data-bs-ride="carousel">
-      <div class="carousel-inner">
+  <div class="px-5 mb-5">
+    <section id="video-carousel">
+      <br>
+      <br>
+      <br>
+      <br>
+      <h2>Our Special Video Moments</h2>
+      
+      <div id="videoCarousel" class="carousel slide mb-5" data-bs-ride="carousel">
+        <div class="carousel-inner">
 
-        <!-- First Video Slide (Active) -->
-        <div class="carousel-item active">
-          <video class="d-block w-100" controls autoplay muted>
-            <source src="Videos/FirstTiktok.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-          </video>
+          <!-- First Video Slide (Active) -->
+          <div class="carousel-item active">
+            <video class="d-block w-100" controls autoplay muted>
+              <source src="Videos/FirstTiktok.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+
+          <!-- Second Video Slide -->
+          <div class="carousel-item">
+            <video class="d-block w-100" controls autoplay muted>
+              <source src="Videos/TimeLapse.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+
+          <!-- Third Video Slide -->
+          <div class="carousel-item">
+            <video class="d-block w-100" controls autoplay muted>
+              <source src="Videos/FavTiktok.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+
+          <!-- Fourth Video Slide -->
+          <div class="carousel-item">
+            <video class="d-block w-100" controls autoplay muted>
+              <source src="Videos/Vlog.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+
         </div>
 
-        <!-- Second Video Slide -->
-        <div class="carousel-item">
-          <video class="d-block w-100" controls autoplay muted>
-            <source src="Videos/TimeLapse.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-          </video>
-        </div>
-
-        <!-- Third Video Slide -->
-        <div class="carousel-item">
-          <video class="d-block w-100" controls autoplay muted>
-            <source src="Videos/FavTiktok.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-          </video>
-        </div>
-
-        <!-- Fourth Video Slide -->
-        <div class="carousel-item">
-          <video class="d-block w-100" controls autoplay muted>
-            <source src="Videos/Vlog.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-          </video>
-        </div>
-
+        <!-- Carousel Controls -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#videoCarousel" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#videoCarousel" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
       </div>
-
-      <!-- Carousel Controls -->
-      <button class="carousel-control-prev" type="button" data-bs-target="#videoCarousel" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Previous</span>
-      </button>
-      <button class="carousel-control-next" type="button" data-bs-target="#videoCarousel" data-bs-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Next</span>
-      </button>
-    </div>
-  </section>
+    </section>
+  </div>
 
 <!--   <section id="playlist">
     <h2>Our Playlist</h2>

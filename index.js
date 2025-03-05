@@ -65,6 +65,36 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
+  // About me Zoom Picture
+  const aboutRight = document.querySelector(".about-right");
+  const aboutImage = document.querySelector(".about-image");
+
+  // Create magnifier dynamically
+  const magnifier = document.createElement("div");
+  magnifier.classList.add("magnifier");
+  aboutRight.appendChild(magnifier);
+
+  aboutRight.addEventListener("mousemove", function (e) {
+    let rect = aboutImage.getBoundingClientRect();
+    let x = e.clientX - rect.left;
+    let y = e.clientY - rect.top;
+    let xPercent = (x / rect.width) * 100;
+    let yPercent = (y / rect.height) * 100;
+
+    // Set magnifier position
+    magnifier.style.left = `${x}px`;
+    magnifier.style.top = `${y}px`;
+    magnifier.style.display = "block";
+
+    // Apply background image for zoom effect
+    magnifier.style.backgroundImage = `url('${aboutImage.src}')`;
+    magnifier.style.backgroundPosition = `${xPercent}% ${yPercent}%`;
+  });
+
+  aboutRight.addEventListener("mouseleave", function () {
+    magnifier.style.display = "none"; // Hide magnifier when leaving
+  });
+
   // Gallery scrolling system
   const galleryItems = Array.from(document.querySelectorAll('.gallery-item'));
   let currentIndex = 0;
@@ -142,7 +172,6 @@ document.addEventListener('DOMContentLoaded', () => {
   window.onload = function () {
     document.getElementById("loading-screen").style.display = "none";
   };
-
 
   document.querySelector('.navbar-brand').addEventListener('click', scrollToHomeAndReload);
 });
