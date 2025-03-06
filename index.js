@@ -102,7 +102,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   function updateVisibleItems() {
     const screenWidth = window.innerWidth;
-    visibleItems = screenWidth <= 480 ? 1 : screenWidth <= 768 ? 2 : 3;
+    visibleItems = screenWidth <= 480 ? 2 : screenWidth <= 768 ? 2 : 3;
   }
 
   function updateGalleryView() {
