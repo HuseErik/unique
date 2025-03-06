@@ -167,11 +167,16 @@ document.addEventListener('DOMContentLoaded', () => {
     event.preventDefault();
     document.getElementById('home').scrollIntoView({ behavior: 'smooth' });
     setTimeout(() => location.reload(), 1000);
-  }*/
 
-  window.onload = function () {
-    document.getElementById("loading-screen").style.display = "none";
-  };
 
   document.querySelector('.navbar-brand').addEventListener('click', scrollToHomeAndReload);
+*/
+  window.onload = function () {
+    // Set a delay of 3 seconds (3000 milliseconds)
+    setTimeout(function() {
+      document.getElementById("loading-screen").style.display = "none";
+    }, 3000); // 3000ms delay before hiding the loading screen
+  };
+
+  
 });
