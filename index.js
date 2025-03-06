@@ -163,11 +163,11 @@ document.addEventListener('DOMContentLoaded', () => {
   document.getElementById("openLetterBtn").addEventListener("click", toggleLetter);
 
   // Home button reload function with delay
-  function scrollToHomeAndReload(event) {
+/*  function scrollToHomeAndReload(event) {
     event.preventDefault();
     document.getElementById('home').scrollIntoView({ behavior: 'smooth' });
     setTimeout(() => location.reload(), 1000);
-  }
+  }*/
 
   window.onload = function () {
     document.getElementById("loading-screen").style.display = "none";
