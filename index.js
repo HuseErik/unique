@@ -1,4 +1,12 @@
 document.addEventListener('DOMContentLoaded', () => {
+
+  window.onload = function () {
+    // Set a delay of 3 seconds (3000 milliseconds)
+    setTimeout(function() {
+      document.getElementById("loading-screen").style.display = "none";
+    }, 3000); // 3000ms delay before hiding the loading screen
+  };
+
   // Disable scrolling & lock functions initially
   document.body.classList.remove('unlocked'); // Ensure scrolling is locked
   document.getElementById("openLetterBtn").classList.add("hidden");
@@ -171,12 +179,28 @@ document.addEventListener('DOMContentLoaded', () => {
 
   document.querySelector('.navbar-brand').addEventListener('click', scrollToHomeAndReload);
 */
-  window.onload = function () {
-    // Set a delay of 3 seconds (3000 milliseconds)
-    setTimeout(function() {
-      document.getElementById("loading-screen").style.display = "none";
-    }, 3000); // 3000ms delay before hiding the loading screen
-  };
 
-  
+  // List of MP3 file names
+  // var playlist = [
+  //     '1.mp3',  // Song 1
+  //     '2.mp3',  // Song 2
+  //     '3.mp3'   // Song 3
+  // ];
+
+  // var currentSongIndex = 0;  // Keep track of the current song index
+
+  // // Function to change to the next song
+  // function nextSong() {
+  //     currentSongIndex++;
+  //     if (currentSongIndex >= playlist.length) {
+  //         currentSongIndex = 0;  // If at the end of the playlist, loop back to the first song
+  //     }
+
+  //     var audioPlayer = document.getElementById('audioPlayer');
+  //     var audioSource = document.getElementById('audioSource');
+  //     audioSource.src = 'Mp3/' + playlist[currentSongIndex];  // Update the source of the audio file
+  //     audioPlayer.load();  // Reload the audio element with the new source
+  //     audioPlayer.play();  // Play the new song
+  // }
+
 });

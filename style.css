@@ -603,6 +603,20 @@ html {
   border-radius: 50%;
 }
 
+/*Audio Section ---------------*/
+
+/*#audioPlayer audio {
+    width: 100%;
+    max-width: 600px;
+    margin-top: 20px;
+}
+#audioPlayer button {
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 10px;
+}*/
+
 
 /* Footer Section ---------------*/
 footer {
@@ -611,6 +625,7 @@ footer {
   color: #f9f9f9;
   padding: 10px 0;
   width: 100%;
+  z-index: 10002;
 }
 
 /* Modal Styling */
@@ -657,23 +672,3 @@ footer {
 html {
   scroll-behavior: smooth;
 }
-
-/*#playlist {
-  background-color: #f5f5f5;
-  padding: 40px 0;
-  text-align: center;
-}
-
-#playlist h2 {
-  font-size: 2rem;
-  color: #333;
-  margin-bottom: 20px;
-}
-
-.playlist-container {
-  max-width: 960px;
-  margin: 0 auto;
-  padding: 10px;
-}
-
-*/
