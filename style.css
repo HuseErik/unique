@@ -329,7 +329,7 @@ nav {
 /* Ensure smooth scrolling on smaller screens */
 @media (max-width: 768px) {
   .gallery-container {
-    gap: 2px;
+    gap: 10px;
     width: 100%; /* Full width on smaller screens */
   }
 
