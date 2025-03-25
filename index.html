@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>4</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Agu+Display:MORF@25&family=Sacramento&family=Orbitron:wght@400..900&family=Sixtyfour+Convergence&family=Bubblegum+Sans&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+
+  <div class="snowflakes">
+    <div class="snowflake">
+  <img src="https://i.pinimg.com/originals/96/c7/8b/96c78bc8ab873498b763798793d64f62.png"width="25">
+    </div>
+    <div class="snowflake">
+  <img src="https://i.pinimg.com/originals/96/c7/8b/96c78bc8ab873498b763798793d64f62.png"width="25">  </div>
+    <div class="snowflake">
+   <img src="https://i.pinimg.com/originals/96/c7/8b/96c78bc8ab873498b763798793d64f62.png"width="25">
+    </div>
+    <div class="snowflake">
+    <img src="https://i.pinimg.com/originals/96/c7/8b/96c78bc8ab873498b763798793d64f62.png"width="25">
+    </div>
+    <div class="snowflake">
+    <img src="https://i.pinimg.com/originals/96/c7/8b/96c78bc8ab873498b763798793d64f62.png"width="25">
+    </div>
+    <div class="snowflake">
+  <img src="https://i.pinimg.com/originals/96/c7/8b/96c78bc8ab873498b763798793d64f62.png"width="25">
+    </div>
+    <div class="snowflake">
+  <img src="https://i.pinimg.com/originals/96/c7/8b/96c78bc8ab873498b763798793d64f62.png"width="25">
+    </div>
+    <div class="snowflake">
+  <img src="https://i.pinimg.com/originals/96/c7/8b/96c78bc8ab873498b763798793d64f62.png"width="25">
+    </div>
+    <div class="snowflake">
+  <img src="https://i.pinimg.com/originals/96/c7/8b/96c78bc8ab873498b763798793d64f62.png"width="25">
+    </div>
+    <div class="snowflake">
+  <img src="https://i.pinimg.com/originals/96/c7/8b/96c78bc8ab873498b763798793d64f62.png"width="25">
+    </div>
+  </div>
+
+  <!-- Loading Screen -->
+  <div id="loading-screen">
+    <div class="spinner"></div>
+    <p>Loading...</p>
+  </div>
+
+  <!-- Header Section -->
+  <header class="py-5">
+    <div id="home" class="header-container">
+      <h1>Welcome to Our Special Place</h1>
+      <p>Where every visit lets you relive cherished moments.</p>
+      <!-- Proceed Button -->
+      <a href="#about" class="proceed-btn" onclick="enableScroll()">Proceed</a>
+    </div>
+  </header>
+
+  <!-- PIN Modal -->
+  <div class="modal fade" id="pinModal" tabindex="-1" aria-labelledby="pinModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="pinModalLabel">Enter PIN</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <input type="password" id="pinInput" class="form-control" placeholder="Enter PIN" />
+          <p class="text-danger" id="pinError" style="display: none;">Incorrect PIN, please try again.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+          <button type="button" class="btn btn-primary" id="submitPinBtn">Submit</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <nav class="navbar navbar-expand-lg sticky-top" id="mainNav">
+      <div class="container">
+          <!-- <a class="navbar-brand text-light fs-5" href="#home" onclick="scrollToHomeAndReload(event)">
+            Home
+          </a> -->
+          <a class="navbar-brand text-light fs-5" href="https://huseerik.github.io/unique/">
+            Home
+          </a>
+          <button class="navbar-toggler text-uppercase font-weight-bold fs-6 text-white rounded" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+              Menu
+          </button>
+          <div class="collapse navbar-collapse" id="navbarResponsive">
+              <ul class="navbar-nav ms-auto text-uppercase fs-6">
+                  <li class="nav-item mx-0 mx-lg-1"><a class="nav-link rounded text-light" href="#about">About Us</a></li>
+                  <li class="nav-item mx-0 mx-lg-1"><a class="nav-link rounded text-light" href="#gallery">Gallery</a></li>
+                  <li class="nav-item mx-0 mx-lg-1"><a class="nav-link rounded text-light" href="#memories">Memories</a></li>
+                  <li class="nav-item mx-0 mx-lg-1"><a class="nav-link rounded text-light" href="#video-carousel">Videos</a></li>
+                  <li class="nav-item mx-0 mx-lg-1"><a class="nav-link rounded text-light" href="#folder">Collections</a></li>
+              </ul>
+          </div>
+      </div>
+  </nav>
+
+  <!-- About Section -->
+  <section id="about" class="about-section">
+    <div class="about-left">
+      <h2>AboutUs</h2>
+      <p class="section-text">This is our journey of love, laughter, and adventure. Every photo and video captures a memory we've made together—from our first date to our favorite moments. This website is a tribute to the beautiful experiences we share, and a reminder that the best moments in life are the ones spent with you.</p>
+    </div>
+    <div class="about-right">
+      <img src="./Images/AboutUs.jpg" alt="photo" class="about-image">
+    </div>
+  </section>
+
+  <!-- Gallery Section -->
+  <section id="gallery">
+    <br>
+    <br>
+    <h2 class="mt-5">Our Moments Together</h2>
+    <p>Click to preview</p>
+    <div class="gallery-wrapper">
+      <!-- Left Arrow Button -->
+      <button class="gallery-btn left-btn">&#8592;</button>
+
+      <div class="gallery-container">
+        <div class="gallery-item" data-bs-toggle="modal" data-bs-target="#imageModal" data-bs-src="./Images/1stPhoto.jpg">
+          <img src="./Images/1stPhoto.jpg" alt="Our First Photo Together - 12/28/24 - Naiilang pa ako humawak sayo dito 📸">
+        </div>
+        <div class="gallery-item" data-bs-toggle="modal" data-bs-target="#imageModal" data-bs-src="./Images/1stMonth.jpg">
+          <img src="./Images/1stMonth.jpg" alt="Our First Monthsary - 02/07/25 - Masaya now palo pag-uwi 😆💖">
+        </div>
+        <div class="gallery-item" data-bs-toggle="modal" data-bs-target="#imageModal" data-bs-src="./Images/1stVal.jpg">
+          <img src="./Images/1stVal.jpg" alt="Our First Valentine - 02/14/25 - A surprise you didn’t expect, dito din ako nangitim hehe 🎁🌞">
+        </div>
+        <div class="gallery-item" data-bs-toggle="modal" data-bs-target="#imageModal" data-bs-src="./Images/PerfectDate.jpg">
+          <img src="./Images/PerfectDate.jpg" alt="A Perfect Date – 01/17/25 - This was the most perfect date we've had so far. Our date didn’t go as planned, but it turned out even better! This was also the first time I introduced you to my family, and when it was time to go home, we took a short adventure and met Josh, hehe. 💑✨">
+        </div>
+        <div class="gallery-item" data-bs-toggle="modal" data-bs-target="#imageModal" data-bs-src="./Images/FirstMeal.jpg">
+          <img src="./Images/FirstMeal.jpg" alt="The first meal you ever made for me. - 01/26/25 - This is a very memorable moment and you know why hehe🤭🍽️">
+        </div>
+        <div class="gallery-item" data-bs-toggle="modal" data-bs-target="#imageModal" data-bs-src="./Images/VisitaIglesia1.jpg">
+          <img src="./Images/VisitaIglesia1.jpg" alt="This was not a date. - 03/13/25 - A spiritual journey together, visiting churches and reflecting on the meaning of faith and love 🙏⛪">
+        </div>
+        <div class="gallery-item" data-bs-toggle="modal" data-bs-target="#imageModal" data-bs-src="./Images/2ndMonth4.jpg">
+          <img src="./Images/2ndMonth4.jpg" alt="My Favorite Date So Far - 03/07/25 - Our 2nd Monthsary and the longest ride we've had. We prepared ahead of time, but our preparation wasn’t enough, and our bodies weren't ready for what was coming. However, we had fun for the rest of the day. We took a lot of pictures and videos, and even played in the bathroom, hehe. My favorite part was our long conversation without any worries or people around us, and our conversation while riding.">
+        </div>
+      </div>
+
+      <!-- Right Arrow Button -->
+      <button class="gallery-btn right-btn">&#8594;</button>
+    </div>
+
+    <!-- Modal for Image Preview -->
+    <div class="modal fade" id="imageModal" tabindex="-1" aria-labelledby="imageModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <p id="modalCaption" class="image-caption"></p> <!-- Moved above the image -->
+            <img id="modalImage" src="" alt="Zoomed Image" class="img-fluid">
+            <!-- <p>I want to add a unique Story here based on the pictures</p> -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+   <!-- Letter -->
+  <div id="floating-love-letter" class="floating-love-letter hidden">
+    <div class="letter-content">
+        <p>My love,</p>
+        <p>I’ve realized that being with you is changing me, and at first, I wasn’t sure how to feel about it. But now, I see that through your love, patience, and warmth, I’m becoming someone I truly like. 🥰</p>
+        <p>You show me kindness when I need it most 🤗, you challenge me in the best ways 💪, and you remind me of the beauty in love and growth. 🌱💞 And for that, I just want you to know—I love you, deeply and completely. ❤️✨</p>
+        <p>Forever yours,<br>Jose</p>
+    </div>
+
+  </div>
+
+  <button id="openLetterBtn" class="open-letter-btn hidden" onclick="toggleLetter()">Open My Letter</button>
+
+
+  <!-- Memories Section -->
+  <section id="memories">
+    <br>
+    <br>
+    <h2>More Special Memories</h2>
+    <div class="memories-grid">
+      <div class="memory-item">
+        <img src="./Images/Memories/BadMood.jpg" alt="BadMood">
+        <div class="caption">Bad Mood Moment</div>
+      </div>
+      <div class="memory-item">
+        <img src="./Images/Memories/VisitaIglesia.jpg" alt="VisitaIglesia">
+        <div class="caption">Visita Iglesia With Father</div>
+      </div>
+      <div class="memory-item">
+        <img src="./Images/Memories/MallAfterLMS.jpg" alt="MallAfterLMS">
+        <div class="caption">Mall After LMS</div>
+      </div>
+      <div class="memory-item">
+        <img src="./Images/Memories/HappyTubig.jpg" alt="HappyTubig">
+        <div class="caption">Water is life</div>
+      </div>
+      <div class="memory-item">
+        <img src="./Images/Memories/Butasbutas.jpg" alt="Butasbutas">
+        <div class="caption">Trip to Mauban ButasButas</div>
+      </div>
+      <div class="memory-item">
+        <img src="./Images/Memories/Noid.jpg" alt="NoIdNoFaceMask">
+        <div class="caption">No ID, No Face Mask</div>
+      </div>
+      <div class="memory-item">
+        <img src="./Images/Memories/2ndMonth.jpg" alt="2ndMonth">
+        <div class="caption">2nd Month with RedHorse Again</div>
+      </div>
+      <div class="memory-item">
+        <img src="./Images/Memories/SuperGanda.jpg" alt="SuperGanda">
+        <div class="caption">Super Ganda 🥰</div>
+      </div>
+      <div class="memory-item">
+        <img src="./Images/Memories/Tayabas.jpg" alt="Tayabas">
+        <div class="caption">Trip to Tayabas 💞</div>
+      </div>
+      <div class="memory-item">
+        <img src="./Images/Memories/ValSelfie.jpg" alt="ValSelfie">
+        <div class="caption">Valentine's Selfie 💖</div>
+      </div>
+      <div class="memory-item">
+        <img src="./Images/Memories/FirstSelfie.jpg" alt="FirstSelfie">
+        <div class="caption">Your First Selfie</div>
+      </div>
+      <div class="memory-item">
+        <img src="./Images/Memories/Proof.jpg" alt="Proof">
+        <div class="caption">Proof of Selfie</div>
+      </div>
+      <div class="memory-item">
+        <img src="./Images/Memories/2ndMonth2.jpg" alt="2ndMonth2">
+        <div class="caption">2nd Monthsary</div>
+      </div>
+      <div class="memory-item">
+        <img src="./Images/Memories/PaCuteAmp.jpg" alt="PaCuteAmp">
+        <div class="caption">Pa Cute Amp</div>
+      </div>
+      <div class="memory-item">
+        <img src="./Images/Memories/VisitaIglesia3.jpg" alt="2ndMonth2">
+        <div class="caption">Visita Iglesia</div>
+      </div>
+      <div class="memory-item">
+        <img src="./Images/Memories/FavPhoto.jpg" alt="FavPhoto">
+        <div class="caption">My Fav photo of you</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Video Carousel Section -->
+  <div class="px-5 mb-5">
+    <section id="video-carousel">
+      <br>
+      <br>
+      <br>
+      <br>
+      <h2>Our Special Video Moments</h2>
+      
+      <div id="videoCarousel" class="carousel slide mb-5" data-bs-ride="carousel">
+        <div class="carousel-inner">
+
+          <!-- First Video Slide (Active) -->
+          <div class="carousel-item active">
+            <video class="d-block w-100" controls autoplay muted>
+              <source src="Videos/FirstTiktok.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+
+          <!-- Second Video Slide -->
+          <div class="carousel-item">
+            <video class="d-block w-100" controls autoplay muted>
+              <source src="Videos/TimeLapse.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+
+          <!-- Third Video Slide -->
+          <div class="carousel-item">
+            <video class="d-block w-100" controls autoplay muted>
+              <source src="Videos/FavTiktok.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+
+          <!-- Fourth Video Slide -->
+          <div class="carousel-item">
+            <video class="d-block w-100" controls autoplay muted>
+              <source src="Videos/Vlog.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+
+        </div>
+
+        <!-- Carousel Controls -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#videoCarousel" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#videoCarousel" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </section>
+  </div>
+
+
+  <div id="folder">
+    <!-- Modal more Pictures/Collection - Folder Section -->
+    <button type="button" class="btn mb-5" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+      Open Collection
+    </button>
+
+    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+      <div class="modal-dialog modal-xl">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="staticBackdropLabel">Collection (More Pictures/Videos)</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body1">
+            <div class="image-gallery text-center">
+                <img src="./Images/Collection/2ndMonth1.jpg" class="coll my-1" alt="2ndMonth1">
+                <img src="./Images/Collection/2ndMonth3.jpg" class="coll my-1" alt="2ndMonth3">
+                <img src="./Images/Collection/2ndMonth5.jpg" class="coll my-1" alt="2ndMonth5">
+                <img src="./Images/Collection/VisitaIglesia2.jpg" class="coll my-1" alt="VisitaIglesia2">
+            </div>
+          </div>
+          <div>
+            <form class="border border-light text-center mt-5 mb-5">
+              <p>Links</p>
+              <p><a href="https://drive.google.com/file/d/1DSnD5oObJz3y0wkm7djoCbdzxdIdBBzy/view?usp=drive_link" target="_blank" class="link-underline-opacity-25 link-underline-opacity-100-hover">Exlcusive Video - 2nd Monthsary</a></p>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+
+    <!-- Audio Player -->
+<!--     <h2>Our Playlist</h2>
+    <audio id="audioPlayer" controls>
+        <source id="audioSource" src="Mp3/1.mp3" type="audio/mp3">
+        Your browser does not support the audio element.
+    </audio> -->
+
+    <!-- Next Button -->
+    <!-- <button onclick="nextSong()">Next</button> -->
+
+
+  <!-- Footer Section -->
+  <footer id="footer" class="text-white py-1 text-center">
+      <div class="mx-2">Made with ❤️ by Jose</div>
+      <div class="mx-2">&copy;<span id="year"></span> Our Website</div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="index.js"></script>
+</body>
+</html>
