@@ -15,7 +15,7 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  z-index: 10004;
+  z-index: 9999999;
 }
 
 /* Simple Spinner Animation */
@@ -300,7 +300,7 @@ nav {
 
 /* Gallery Section ---------------*/
 #gallery {
-  padding: 20px;
+  padding: 0px;
   text-align: center;
 }
 
@@ -689,8 +689,16 @@ footer {
   transition: transform 0.2s;
 }
 
+/* Default hover effect for larger screens */
 .coll:hover {
   transform: scale(2.1);
+}
+
+/* Adjust hover effect for smaller screens */
+@media (max-width: 800px) {
+  .coll:hover {
+    transform: scale(1.2);
+  }
 }
 
 #modalImage1 {
