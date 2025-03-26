@@ -387,6 +387,18 @@ nav {
   }
 }
 
+@media (max-width: 420px) {
+  .gallery-container {
+    gap: 10px;
+    width: 100%; /* Full width on smaller screens */
+  }
+
+  .gallery-item {
+    width: 125px;
+    height: 200px;
+  }
+}
+
 /* Modal Styling */
 .modal-body {
   text-align: center;
